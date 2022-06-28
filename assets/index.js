@@ -20,20 +20,18 @@ function checkColors(e) {
   // $(clicked).html(currentID);
   // alert(currentID)
 
-
   const paragraphColor = (document.getElementsByClassName('rgb')[0].innerText)
   const pickedColor = (document.getElementsByClassName('colors__block')[clickedIndex].style.backgroundColor);
-  
-  for (var i = 0; i = 6; i++) {
-    document.getElementsByClassName('colors__block')[0].backgroundColor = "rgb(243, 126, 20)";
-  }
 
 // trtr.style.backgroundColor = "rgb(243, 126, 20)";
   if(paragraphColor == pickedColor.toUpperCase()){
-    
-    
+    for (var i = 0; i < n; i++) {
+      document.getElementsByClassName('colors__block')[i].style.backgroundColor = pickedColor.toUpperCase();
+    }
+    document.getElementById('gamebc').style.backgroundColor = pickedColor.toUpperCase();
   }else{
-    alert('Try again')
+    document.getElementsByClassName('colors__block')[clickedIndex].style.backgroundColor = "rgb(255,255,255)";
+    document.getElementById('gamebc').style.backgroundColor = "rgb(255,255,255)";
   }
 }
 
@@ -47,6 +45,8 @@ function resetGame() {
   setColors();
   statusEl.innerHTML =
     "Try to guess the right color based on the RGB value by clicking on the blocks.";
+
+    document.getElementById('gamebc').style.backgroundColor = "rgb(255,255,255)";
 }
 
 function setColors() {
