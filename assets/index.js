@@ -17,21 +17,24 @@ function checkColors(e) {
   // alert(randomColor())
   var clicked = e.target;
   var clickedIndex = clicked.id || "No ID!";
-  // $(clicked).html(currentID);
-  // alert(currentID)
+
 
   const paragraphColor = (document.getElementsByClassName('rgb')[0].innerText)
   const pickedColor = (document.getElementsByClassName('colors__block')[clickedIndex].style.backgroundColor);
 
-// trtr.style.backgroundColor = "rgb(243, 126, 20)";
+
   if(paragraphColor == pickedColor.toUpperCase()){
     for (var i = 0; i < n; i++) {
       document.getElementsByClassName('colors__block')[i].style.backgroundColor = pickedColor.toUpperCase();
+      
     }
     document.getElementById('gamebc').style.backgroundColor = pickedColor.toUpperCase();
+    alert('Nice! Play again')
+    resetGame();
   }else{
     document.getElementsByClassName('colors__block')[clickedIndex].style.backgroundColor = "rgb(255,255,255)";
     document.getElementById('gamebc').style.backgroundColor = "rgb(255,255,255)";
+    alert('Oops! Try again')
   }
 }
 
