@@ -10,3 +10,5 @@ If the player clicks on the wrong tile:
 - The tile disappears and they get a chance to click on the remaining tiles.
 
 Hint: use loops, high-order array methods and conditional statements.
+
+Follow the link to play the game.  https://paul-siameto.github.io/Color_Game/
